@@ -1,4 +1,4 @@
-function onReady(){
+function onReady() {
 	const addToDoForm = document.getElementById('addToDoForm');
 	const newToDoText = document.getElementById('newToDoText');
 	const toDoList = document.getElementById('toDoList');
@@ -22,7 +22,7 @@ function onReady(){
 		newLi.textContent = title;
 
 		//attach it to the ul
-		todoList.appendChild(newLi);
+		toDoList.appendChild(newLi);
 
 		//attach the checkbox to the li
 		newLi.appendChild(checkbox);
