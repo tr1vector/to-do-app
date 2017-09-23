@@ -21,6 +21,9 @@ function onReady(){
 		//set the title
 		newLi.textContent = title;
 
+		//attach it to the ul
+		todoList.appendChild(newLi);
+
 		//attach the checkbox to the li
 		newLi.appendChild(checkbox);
 
@@ -30,5 +33,5 @@ function onReady(){
 }
 
 window.onload = function () {
-	onReady();
+	onReady() ;
 };
