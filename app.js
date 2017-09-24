@@ -30,6 +30,13 @@ function onReady() {
 		//empty the input
 		newToDoText.value = '';
 	});
+	
+	addToDoForm.addEventListener('reset', (event) => {
+		var toDo = document.getElementsByTagName("li");
+		if(toDo.checked === true){
+			li.removeChild(checkbox);
+		}
+	});
 }
 
 window.onload = function () {
