@@ -2,7 +2,7 @@ function onReady() {
 	const addToDoForm = document.getElementById('addToDoForm');
 	const newToDoText = document.getElementById('newToDoText');
 	const toDoList = document.getElementById('toDoList');
-
+	const deleteButton = document.getElementById("deleteButton");
 	addToDoForm.addEventListener('submit', (event) => {
 		event.preventDefault();
 
@@ -31,14 +31,16 @@ function onReady() {
 		newToDoText.value = '';
 	});
 	
-	addToDoForm.addEventListener('reset', (event) => {
-		var toDo = document.getElementsByTagName("li");
-		if(toDo.checked === true){
-			li.removeChild(checkbox);
-		}
+	deleteButton.addEventListener("click", function() {
+		var todo = document.querySelectorAll("LI");
+			for(i = 0; i < todo.length; i++){
+				if(todo[i].input.checked == true){
+					todo[i].remove();
+				}
+			}
+	
 	});
 }
-
 window.onload = function () {
 	onReady() ;
-};
+}
