@@ -33,12 +33,12 @@ function onReady() {
 	
 	deleteButton.addEventListener("click", function() {
 		var todo = document.querySelectorAll("LI");
-			for(i = 0; i < todo.length; i++){
-				if(todo[i].input.checked == true){
-					todo[i].remove();
+		var input = document.querySelectorAll("INPUT");
+			for(i = 0; i < input.length; i++){
+				if(input[i].checked === true){
+						input[i].parentNode.remove();
 				}
 			}
-	
 	});
 }
 window.onload = function () {
