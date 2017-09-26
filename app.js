@@ -35,6 +35,17 @@ function onReady() {
 		createNewToDo();
 	});
 
+	deleteButton.addEventListener("click", function() {
+		var todo = document.querySelectorAll("LI");
+		var input = document.querySelectorAll("INPUT");
+			for(i = 0; i < input.length; i++){
+				if(input[i].checked === true){
+						input[i].parentNode.remove();
+						toDos.pop(input[i].parentNode);
+				}
+			}
+	});
+
 	renderTheUI(toDos);
 }
 window.onload = function () {
